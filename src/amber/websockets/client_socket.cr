@@ -104,7 +104,7 @@ module Amber
         @subscription_manager.subscriptions.keys.includes?(topic.to_s)
       end
 
-      protected def disconnect!
+      def disconnect!
         ClientSockets.remove_client_socket(self)
         @socket.close unless @socket.closed?
       end
